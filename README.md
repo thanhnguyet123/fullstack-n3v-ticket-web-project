@@ -15,7 +15,7 @@ N3V Ticket mô phỏng một nền tảng bán vé thực tế (kiểu Ticketbox
 - Email: `admin@n3v.com`
 - Password: `Admin@123`
 
-> ⚠️ **Lưu ý:** Dự án đang deploy trên gói miễn phí (free tier), nên server backend có thể "ngủ" sau thời gian không hoạt động. Lần truy cập đầu tiên hoặc khi tải danh sách sự kiện có thể mất khoảng 30–60 giây để khởi động lại — vui lòng chờ một chút thay vì reload liên tục.
+> ⚠️ **Lưu ý:** Dự án đang deploy trên gói miễn phí (free tier), nên server backend có thể "ngủ" sau thời gian không hoạt động. Lần truy cập đầu tiên hoặc khi tải danh sách sự kiện có thể mất khoảng 30-60 giây để khởi động lại - vui lòng chờ một chút thay vì reload liên tục.
 
 ## 🖼️ Screenshots
 
@@ -47,13 +47,13 @@ N3V Ticket mô phỏng một nền tảng bán vé thực tế (kiểu Ticketbox
 **Cấu hình khu vực & bulk generate ghế theo hàng**
 ![Cấu hình khu vực và ghế](./screenshots/09-admin-cau-hinh-khu-vuc.png)
 
-## 👤 Vai trò của tôi — Lê Phạm Thanh Nguyệt
-Phụ trách module **Event Management (Quản lý & Hiển thị sự kiện)** — module lõi cung cấp dữ liệu và luồng hiển thị sự kiện cho toàn bộ hệ thống, từ phía admin lẫn phía người dùng cuối.
+## 👤 Vai trò của tôi - Lê Phạm Thanh Nguyệt
+Phụ trách module **Event Management (Quản lý & Hiển thị sự kiện)** - module lõi cung cấp dữ liệu và luồng hiển thị sự kiện cho toàn bộ hệ thống, từ phía admin lẫn phía người dùng cuối.
 
 **Thiết kế & xây dựng:**
 - Thiết kế schema database: `Category`, `Event`, `EventZone`, `EventSeat`, quản lý migration bằng Flyway.
 - Xây dựng cơ chế hỗ trợ **3 loại sơ đồ bố trí vé** khác nhau trong cùng một hệ thống: Seat Map (chọn ghế cụ thể), Zone (bán theo khu vực), Tea Lounge (bán theo bàn) - cho phép admin chọn loại phù hợp khi tạo sự kiện, và loại sơ đồ không thể thay đổi sau khi tạo để đảm bảo tính toàn vẹn dữ liệu.
-- Xây dựng tính năng **bulk seat generation**: tự động sinh hàng loạt ghế theo cấu hình khu vực (số hàng, số ghế/hàng), giảm thao tác nhập liệu thủ công cho admin.
+- Xây dựng tính năng **bulk seat generation**: tự động sinh hàng loạt ghế theo cấu hình khu vực (số hàng, số ghế/ hàng), giảm thao tác nhập liệu thủ công cho admin.
 - Thiết kế **state machine** quản lý vòng đời sự kiện: `DRAFT → PUBLISHED → ONGOING → COMPLETED / CANCELLED`, đảm bảo sự kiện chỉ hiển thị công khai và cho phép đặt vé khi ở đúng trạng thái.
 - Xây dựng **bộ lọc sự kiện đa tiêu chí** (danh mục, khu vực, khoảng thời gian, từ khóa) bằng JPA Specification, hỗ trợ tìm kiếm động không cần viết lại query cho từng tổ hợp filter.
 - Phát triển giao diện quản trị CRUD sự kiện (tạo/ sửa/ xóa/ công khai), upload ảnh thumbnail & banner, và giao diện cấu hình sơ đồ ghế trực quan cho admin.

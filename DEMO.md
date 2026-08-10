@@ -1,4 +1,4 @@
-# N3V Ticket — Nền tảng bán vé sự kiện trực tuyến
+<img width="1118" height="863" alt="image" src="https://github.com/user-attachments/assets/6999c121-7968-457a-9da8-14580f8075e8" /># N3V Ticket — Nền tảng bán vé sự kiện trực tuyến
 Hệ thống bán vé sự kiện trực tuyến fullstack, hỗ trợ nhiều loại sơ đồ bố trí chỗ ngồi (sơ đồ ghế, khu vực, phòng trà), quản trị sự kiện, đặt vé và thanh toán. Dự án đồ án nhóm 4 người, xây dựng theo mô hình client–server tách biệt Backend (Spring Boot) và Frontend (React/TypeScript).
 
 ## 📌 Giới thiệu
@@ -22,7 +22,8 @@ N3V Ticket mô phỏng một nền tảng bán vé thực tế (kiểu Ticketbox
 ### Trang người dùng — Khám phá & đặt vé sự kiện
 
 **Danh sách & tìm kiếm sự kiện**
-![Danh sách sự kiện](./screenshots/01-danh-sach-su-kien.png)
+![Danh sách sự kiện](<img width="1118" height="863" alt="image" src="https://github.com/user-attachments/assets/3c99d6f7-46de-4373-9616-6d906ca19dee" />
+)
 
 **Trang chi tiết sự kiện — thông tin & bảng giá vé**
 ![Chi tiết sự kiện](./screenshots/02-chi-tiet-su-kien.png)

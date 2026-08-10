@@ -1,4 +1,4 @@
-# N3V Ticket — Nền tảng bán vé sự kiện trực tuyến
+# N3V Ticket - Nền tảng bán vé sự kiện trực tuyến
 Hệ thống bán vé sự kiện trực tuyến fullstack, hỗ trợ nhiều loại sơ đồ bố trí chỗ ngồi (sơ đồ ghế, khu vực, phòng trà), quản trị sự kiện, đặt vé và thanh toán. Dự án đồ án nhóm 4 người, xây dựng theo mô hình client–server tách biệt Backend (Spring Boot) và Frontend (React/TypeScript).
 
 ## 📌 Giới thiệu
@@ -52,11 +52,11 @@ Phụ trách module **Event Management (Quản lý & Hiển thị sự kiện)**
 
 **Thiết kế & xây dựng:**
 - Thiết kế schema database: `Category`, `Event`, `EventZone`, `EventSeat`, quản lý migration bằng Flyway.
-- Xây dựng cơ chế hỗ trợ **3 loại sơ đồ bố trí vé** khác nhau trong cùng một hệ thống: Seat Map (chọn ghế cụ thể), Zone (bán theo khu vực), Tea Lounge (bán theo bàn) — cho phép admin chọn loại phù hợp khi tạo sự kiện, và loại sơ đồ không thể thay đổi sau khi tạo để đảm bảo tính toàn vẹn dữ liệu.
+- Xây dựng cơ chế hỗ trợ **3 loại sơ đồ bố trí vé** khác nhau trong cùng một hệ thống: Seat Map (chọn ghế cụ thể), Zone (bán theo khu vực), Tea Lounge (bán theo bàn) - cho phép admin chọn loại phù hợp khi tạo sự kiện, và loại sơ đồ không thể thay đổi sau khi tạo để đảm bảo tính toàn vẹn dữ liệu.
 - Xây dựng tính năng **bulk seat generation**: tự động sinh hàng loạt ghế theo cấu hình khu vực (số hàng, số ghế/hàng), giảm thao tác nhập liệu thủ công cho admin.
 - Thiết kế **state machine** quản lý vòng đời sự kiện: `DRAFT → PUBLISHED → ONGOING → COMPLETED / CANCELLED`, đảm bảo sự kiện chỉ hiển thị công khai và cho phép đặt vé khi ở đúng trạng thái.
 - Xây dựng **bộ lọc sự kiện đa tiêu chí** (danh mục, khu vực, khoảng thời gian, từ khóa) bằng JPA Specification, hỗ trợ tìm kiếm động không cần viết lại query cho từng tổ hợp filter.
-- Phát triển giao diện quản trị CRUD sự kiện (tạo/sửa/xóa/công khai), upload ảnh thumbnail & banner, và giao diện cấu hình sơ đồ ghế trực quan cho admin.
+- Phát triển giao diện quản trị CRUD sự kiện (tạo/ sửa/ xóa/ công khai), upload ảnh thumbnail & banner, và giao diện cấu hình sơ đồ ghế trực quan cho admin.
 - Xử lý phân quyền & bảo mật: kiểm soát endpoint theo vai trò (admin vs. người dùng), xác thực request bằng JWT.
 
 **Kết quả:** Module hoạt động ổn định, được các module khác trong nhóm (Booking/Payment, Dashboard) sử dụng làm nguồn dữ liệu sự kiện chính; xử lý được cả 3 luồng bán vé khác nhau trên cùng một codebase mà không phải viết logic riêng lẻ cho từng loại.
@@ -64,7 +64,7 @@ Phụ trách module **Event Management (Quản lý & Hiển thị sự kiện)**
 ## ⚙️ Công nghệ sử dụng
 **Backend**
 - Java 21, Spring Boot (Web, Data JPA, Security)
-- PostgreSQL (Supabase) — quản lý schema bằng Flyway Migration
+- PostgreSQL (Supabase) - quản lý schema bằng Flyway Migration
 - JWT Authentication, Spring Security
 - JPA Specification (lọc động), Hibernate Validation
 
